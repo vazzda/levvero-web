@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Levvero</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #F8F9FA;
+      color: #373D43;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #6C757D;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    details {
+      border: 1px solid #E9ECEF;
+      border-radius: 5px;
+      padding: 16px;
+      margin-bottom: 8px;
+    }
+
+    summary {
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 400;
+      color: #6C757D;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    details p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #373D43;
+      margin-top: 12px;
+    }
+
+    details p a {
+      color: #219EBC;
+      text-decoration: none;
+    }
+
+    details p a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #E9ECEF;
+    }
+
+    .contact p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #373D43;
+    }
+
+    .contact a {
+      color: #219EBC;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      main { padding: 36px 20px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 18px; }
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 28px 16px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 17px; }
+      summary, details p { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Support</h1>
+    <p class="subtitle">Frequently asked questions about Levvero.</p>
+
+    <h2>Trackers</h2>
+
+    <details>
+      <summary>How do I create a new tracker?</summary>
+      <p>Tap the + button on your dashboard, select a group (or create a new one), then choose a tracking type: Time (for durations), Counter (for quantities), or Check (for yes/no). Give it a name and you're set.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between Time, Counter, and Check?</summary>
+      <p>Time trackers measure duration in hours and minutes — great for work sessions or exercise. Counter trackers count occurrences — repetitions, glasses of water, pages read. Check trackers are a simple daily yes/no — did you do it today or not.</p>
+    </details>
+
+    <details>
+      <summary>What are Wins, Vices, and Signals?</summary>
+      <p>These define your tracker's intent. A Win is something you want to achieve (you set targets). A Vice is something you want to limit (you set limits). A Signal is something you just want to observe without any target or limit.</p>
+    </details>
+
+    <details>
+      <summary>How do I set or change targets and limits?</summary>
+      <p>Open the tracker's edit screen. For Wins, you can set daily, weekly, and monthly targets. For Vices, you set daily, weekly, and monthly limits. Changing a Signal to a Win or Vice (and back) is possible from the same screen — the app will warn you about the conversion.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete a tracker?</summary>
+      <p>Open the tracker's edit screen and tap Delete. This removes the tracker from all groups and permanently deletes its history. This cannot be undone.</p>
+    </details>
+
+    <h2>Groups</h2>
+
+    <details>
+      <summary>How do I create a group?</summary>
+      <p>Tap the + button on your dashboard and select "Group." Give it a name — trackers you create next can be placed directly into this group.</p>
+    </details>
+
+    <details>
+      <summary>How do I move a tracker to a different group?</summary>
+      <p>Open the tracker's edit screen, find "Change group," and select the destination group. The tracker moves — it doesn't get copied.</p>
+    </details>
+
+    <details>
+      <summary>How do I reorder trackers within a group?</summary>
+      <p>Enter the group's edit mode from the dashboard. Drag trackers using the handle to reorder them. Changes save automatically.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete a group?</summary>
+      <p>Open the group's edit screen and tap Delete. Warning: deleting a group also permanently deletes all trackers inside it and their history. This cannot be undone. If you want to keep your trackers, move them to another group first (via each tracker's edit screen → "Change group"), then delete the empty group.</p>
+    </details>
+
+    <h2>Dashboard & Widgets</h2>
+
+    <details>
+      <summary>How do I customize my dashboard layout?</summary>
+      <p>Tap the + button on your dashboard and choose "Edit Dashboard," or go to Settings → Dashboard. From the edit screen you can reorder groups and widgets by dragging, remove items, or add new ones.</p>
+    </details>
+
+    <details>
+      <summary>What widgets are available?</summary>
+      <p>Daily Time Spend (pie chart of your day), Mood (rate your day on a spectrum), Streaks (manual streak tracking), Auto Streaks (automatically computed from tracker activity), Sleep (log bedtime, wake-up, duration, and quality), and Heatmap (calendar visualization of consistency). New widgets are added regularly — expect new options every month.</p>
+    </details>
+
+    <details>
+      <summary>How do I add a widget to my dashboard?</summary>
+      <p>Tap the + button and select "Widget," or browse the Widgets catalog from Settings. Each widget type can have multiple instances with different configurations.</p>
+    </details>
+
+    <details>
+      <summary>Is there a limit on widgets?</summary>
+      <p>The Free plan allows a limited number of widgets on your dashboard. Premium (Monthly, Annual, or Lifetime) unlocks unlimited widgets.</p>
+    </details>
+
+    <h2>Tags & Analytics</h2>
+
+    <details>
+      <summary>How do I create and use tags?</summary>
+      <p>Go to Settings → Tags → Create New Tag. Choose a name and color. Then assign a tag to any tracker via the tracker's edit screen. Tags are a cross-cutting grouping tool — alongside Groups, they let you slice your data in Analytics and on Share proof cards. For example, tag all work-related trackers across different groups and see combined hours or charts for just that tag.</p>
+    </details>
+
+    <details>
+      <summary>How do I view recaps and graphs?</summary>
+      <p>Open the Analytics tab from the bottom navigation. Switch between Recaps (summary cards with completion rates, hours, rankings) and Graphs (line/bar charts). Use the period selector (Daily, Weekly, Monthly) to change the time range.</p>
+    </details>
+
+    <details>
+      <summary>How do I share my progress?</summary>
+      <p>Open the Share tab from the bottom navigation. Choose a mode (Strength, Charts, Rankings, or Tracker), customize appearance, and tap "Proof card" to generate a shareable image.</p>
+    </details>
+
+    <h2>Settings & Subscription</h2>
+
+    <details>
+      <summary>What does the "Day Start" setting do?</summary>
+      <p>It defines when your day begins. If you set it to 4:00 AM, any activity logged between midnight and 4 AM counts toward the previous day. Useful if you stay up late and want your evening activity on "today."</p>
+    </details>
+
+    <details>
+      <summary>What's included in Premium vs Free?</summary>
+      <p>Free gives you full tracking with a limited number of widgets and limited recap history. Premium (Monthly, Annual, or Lifetime) unlocks unlimited widgets, full history in recaps and analytics, and cross-device sync (coming soon).</p>
+    </details>
+
+    <details>
+      <summary>Is my data private?</summary>
+      <p>Yes. All your data — trackers, entries, groups, everything — is stored locally on your device and never transmitted to any server. The app does not display advertising or share data with third parties. Only anonymous crash reports are sent to help fix bugs. For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+    </details>
+
+    <div class="contact">
+      <h2>Still need help?</h2>
+      <p>Reach us at <a href="mailto:support@levvero.com">support@levvero.com</a></p>
+    </div>
+  </main>
+</body>
+</html>
