@@ -224,7 +224,7 @@
 
       var stopped = false;
       var direction = 1;
-      var speed = 0.1;
+      var speed = window.innerWidth <= 480 ? 0.2 : 0.1;
       var rafId;
       var pos = w.scrollLeft;
 
@@ -245,7 +245,17 @@
         cancelAnimationFrame(rafId);
       }
 
-      w.addEventListener('touchstart', stopForever);
+      var touchStartX, touchStartY;
+      w.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].pageX;
+        touchStartY = e.touches[0].pageY;
+      });
+      w.addEventListener('touchmove', function(e) {
+        if (stopped) return;
+        var dx = Math.abs(e.touches[0].pageX - touchStartX);
+        var dy = Math.abs(e.touches[0].pageY - touchStartY);
+        if (dx > dy && dx > 10) stopForever();
+      });
 
       var startX, scrollStart, isDragging = false;
       w.addEventListener('mousedown', function(e) {
