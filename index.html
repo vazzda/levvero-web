@@ -155,7 +155,7 @@
       -webkit-user-drag: none;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
       .title { font-size: 36px; }
       .tagline { font-size: 16px; }
       .icon { width: 96px; height: 96px; border-radius: 20px; }
@@ -224,7 +224,7 @@
 
       var stopped = false;
       var direction = 1;
-      var speed = window.innerWidth <= 480 ? 0.2 : 0.1;
+      var speed = matchMedia('(pointer: coarse) and (max-width: 767px)').matches ? 0.2 : 0.1;
       var rafId;
       var pos = w.scrollLeft;
 
